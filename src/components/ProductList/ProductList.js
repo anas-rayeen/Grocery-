@@ -1,6 +1,6 @@
 import React from 'react'
 import Butter from '../../assets/butter.png'
-import Strawberry from '../../assets/Strawberry.png'
+import Strawberry from '../../assets/strawberry.png'
 import Eggs from '../../assets/eggs.png'
 import Cabbage from '../../assets/cabbage.png'
 import EggPlant from '../../assets/eggplant.png'
