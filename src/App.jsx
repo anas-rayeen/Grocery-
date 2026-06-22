@@ -84,7 +84,11 @@ const App = () => {
         {
           path: "/order-success",
           element: <OrderSuccess />
-        }
+        },
+         {
+          path: '/products',
+          element: <AllProducts />
+        },
 
 
       ]

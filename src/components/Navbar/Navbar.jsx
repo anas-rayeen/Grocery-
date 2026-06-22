@@ -207,31 +207,75 @@ const Navbar = ({ search, setSearch }) => {
                         } backdrop-blur-xl shadow-xl rounded-xl flex flex-col gap-y-12 items-center gap-x-15 md:hidden absolute top-30 -left-full transform -translate-x-1/2 px-8 py-8 transition-all duration-500 ${showMenu ? "left-1/2" : ""
                         }`}
                     >
-                        <li><NavLink to="/" >Home</NavLink></li>
-                        <li><NavLink to="/about" className={`font-semibold tracking-wider ${darkMode
-                            ? "text-white hover:text-orange-500"
-                            : "text-zinc-800 hover:text-orange-500"
-                            }`}
+                        <li><NavLink to="/" className={({ isActive }) =>
+                            `relative font-semibold tracking-wider transition-all duration-300 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1 
+    after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300
+    ${isActive
+                                ? "text-orange-500 after:w-full"
+                                : `${darkMode
+                                    ? "text-white hover:text-orange-500 after:w-0 hover:after:w-full"
+                                    : "text-zinc-800 hover:text-orange-500 after:w-0 hover:after:w-full"
+                                }`
+                            }`
+                        }>Home</NavLink></li>
+                        <li><NavLink to="/about" className={({ isActive }) =>
+                            `relative font-semibold tracking-wider transition-all duration-300 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1 
+    after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300
+    ${isActive
+                                ? "text-orange-500 after:w-full"
+                                : `${darkMode
+                                    ? "text-white hover:text-orange-500 after:w-0 hover:after:w-full"
+                                    : "text-zinc-800 hover:text-orange-500 after:w-0 hover:after:w-full"
+                                }`
+                            }`
+                        }
                         >About Us</NavLink></li>
-                        <li><NavLink to="/" className={`font-semibold tracking-wider ${darkMode
-                            ? "text-white hover:text-orange-500"
-                            : "text-zinc-800 hover:text-orange-500"
-                            }`}
+                        <li><NavLink to="/products" className={({ isActive }) =>
+                            `relative font-semibold tracking-wider transition-all duration-300 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1 
+    after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300
+    ${isActive
+                                ? "text-orange-500 after:w-full"
+                                : `${darkMode
+                                    ? "text-white hover:text-orange-500 after:w-0 hover:after:w-full"
+                                    : "text-zinc-800 hover:text-orange-500 after:w-0 hover:after:w-full"
+                                }`
+                            }`
+                        }
                         >Products</NavLink></li>
-                        <li><NavLink to="/contact" className={`font-semibold tracking-wider ${darkMode
-                            ? "text-white hover:text-orange-500"
-                            : "text-zinc-800 hover:text-orange-500"
-                            }`}
+                        <li><NavLink to="/contact" className={({ isActive }) =>
+                            `relative font-semibold tracking-wider transition-all duration-300 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1 
+    after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300
+    ${isActive
+                                ? "text-orange-500 after:w-full"
+                                : `${darkMode
+                                    ? "text-white hover:text-orange-500 after:w-0 hover:after:w-full"
+                                    : "text-zinc-800 hover:text-orange-500 after:w-0 hover:after:w-full"
+                                }`
+                            }`
+                        }
                         >Contact-us</NavLink></li>
-                        <li><NavLink to="/login" className={`font-semibold tracking-wider ${darkMode
-                            ? "text-white hover:text-orange-500"
-                            : "text-zinc-800 hover:text-orange-500"
-                            }`}
+                        <li><NavLink to="/login" className={({ isActive }) =>
+                            `relative font-semibold tracking-wider transition-all duration-300 
+    after:content-[''] after:absolute after:left-0 after:-bottom-1 
+    after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300
+    ${isActive
+                                ? "text-orange-500 after:w-full"
+                                : `${darkMode
+                                    ? "text-white hover:text-orange-500 after:w-0 hover:after:w-full"
+                                    : "text-zinc-800 hover:text-orange-500 after:w-0 hover:after:w-full"
+                                }`
+                            }`
+                        }
                         >LogIn</NavLink></li>
-                        <li className='flex p-1 border-2 border-orange-500 rounded-full md:hidden' >
+                        <li className='flex p-1 border-2 border-orange-500 rounded-full md:hidden items-center justify-center' >
                             <input type="text"
                                 placeholder='Search'
-                                className={`flex-1 h-[6vh] px-3 focus:outline-none rounded-2xl ${darkMode
+                                className={`flex-1 h-[6vh] px-3 focus:outline-none rounded-l-full
+                                     ${darkMode
                                     ? "bg-zinc-800 text-white placeholder:text-zinc-400"
                                     : "bg-white text-black"
                                     }`}
