@@ -206,7 +206,7 @@ const Navbar = ({ search, setSearch }) => {
                         : "bg-orange-500/15"
                         } backdrop-blur-xl shadow-xl rounded-xl flex flex-col gap-y-12 items-center gap-x-15 md:hidden absolute top-30 -left-full transform -translate-x-1/2 px-8 py-8 transition-all duration-500 ${showMenu ? "left-1/2" : ""
                         }`}
-                    >className='font-semibold tracking-wider text-orange-500'
+                    >
                         <li><NavLink to="/" >Home</NavLink></li>
                         <li><NavLink to="/about" className={`font-semibold tracking-wider ${darkMode
                             ? "text-white hover:text-orange-500"
